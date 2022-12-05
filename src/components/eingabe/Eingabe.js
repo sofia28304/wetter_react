@@ -14,11 +14,12 @@ function Eingabe() {
 
     if (data.main) {
         return (
-            <div>
-                <input type="text" id="eingabe" className="City" ></input>
-                <button onClick={() => setCityName(document.getElementById("eingabe").value)}>schicken</button>
-                <p>In der Gewünschten Stadt ist die Temperatur {data.main.temp}°C.</p>
-            </div>
+            <section>
+                <p>Möchtest du das Wetter für eine andere Stadt abfragen? Dann gib hier den Stadtnamen ein:</p>
+                <input type="text" id="eingabe" className="City" placeholder="z.B. Antarktik"></input>
+                <button onClick={() => setCityName(document.getElementById("eingabe").value)}>suchen</button>
+                <p>An dem gewünschten Ort liegt die Temperatur bei {data.main.temp}°C. Die Windgeschwindigkeit beträgt {data.wind["speed"]} Meter/Sekunde.</p>
+            </section>
         );
     }
     else { <div>bitte warten...</div> }

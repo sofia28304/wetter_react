@@ -1,5 +1,4 @@
 import './App.css';
-import Detail from "./components/detail/Detail"
 import Eingabe from "./components/eingabe/Eingabe"
 import Overview from "./components/overview/Overview"
 import Button from "./components/button/Button"
@@ -11,7 +10,6 @@ function App() {
         Sofias Wetter App
       </p>
       <Overview />
-      <Detail />
       <Eingabe />
       <Button />
     </div>

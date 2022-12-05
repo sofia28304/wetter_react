@@ -16,21 +16,37 @@ function Overview() {
     }, [lat, lon])
 
     if (data.main) {
+        console.log(data)
         return (
             <section>
-                <p>In Hamburg ist es </p>
+                <p>Hamburg,... </p>
                 <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="wetter Bildchen" />
+                <p>...die Frisur sitzt!</p>
                 <article>
-                    <p>{data.weather[0].description} </p>
+                    <h3>Die aktuelle Temperatur beträgt: <br></br>
+                        {data.main["temp"]} °C</h3>
                 </article>
                 <article>
-                    <h2>Die aktuelle Temperatur beträgt: <br></br>
-                        {data.main["temp"]} °C</h2>
-                </article>
-                <article>
-                    <h2>Die aktuelle Windgeschwindigkeit beträgt:
+                    <h3>Die aktuelle Windgeschwindigkeit beträgt:
                         {data.wind["speed"]} Meter/Sekunde
-                    </h2>
+                    </h3>
+                </article>
+                <article>
+                    <p> Weitere relevante Wetterdaten zu Hamburg: </p>
+                    <table>
+                        <tr>
+                            <td>Die Temperatur fühlt sich an wie:</td>
+                            <td>{data.main["feels_like"]} °C</td>
+                        </tr>
+                        <tr>
+                            <td>Die Luftfeuchtigkeit beträgt:</td>
+                            <td>{data.main["humidity"]} %</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </article>
             </section>
         );
