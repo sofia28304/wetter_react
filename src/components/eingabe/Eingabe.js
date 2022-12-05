@@ -16,7 +16,7 @@ function Eingabe() {
         return (
             <section>
                 <p>Möchtest du das Wetter für eine andere Stadt abfragen? Dann gib hier den Stadtnamen ein:</p>
-                <input type="text" id="eingabe" className="City" placeholder="z.B. Antarktik"></input>
+                <input type="text" id="eingabe" className="City" placeholder="z.B. Antarktis"></input>
                 <button onClick={() => setCityName(document.getElementById("eingabe").value)}>suchen</button>
                 <p>An dem gewünschten Ort liegt die Temperatur bei {data.main.temp}°C. Die Windgeschwindigkeit beträgt {data.wind["speed"]} Meter/Sekunde.</p>
             </section>
