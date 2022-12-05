@@ -14,7 +14,6 @@ function Overview() {
             .then((data) => { setData(data) })
         // setDatata ermöglicht die weitere Verarbeitung vom data-Inhalt außerhalb von den useEffect-Klammern.
     }, [lat, lon])
-    console.log(data.weather[0].icon)
 
     if (data.main) {
         return (
