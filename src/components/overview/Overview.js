@@ -21,7 +21,7 @@ function Overview() {
             <section>
                 <p>Hamburg,... </p>
                 <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="wetter Bildchen" />
-                <p>...die Frisur sitzt!</p>
+                <p>...die Frisur hält!</p>
                 <article>
                     <h3>Die aktuelle Temperatur beträgt: <br></br>
                         {data.main["temp"]} °C</h3>
